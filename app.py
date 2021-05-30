@@ -17,7 +17,7 @@ def load_keras_model():
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['POST'])
 def home():
     #Home page with form
     form = ReusableForm(request.form)
@@ -31,10 +31,6 @@ def home():
 
 
     return render_template('main.html', form = form)
-
-
-def main():
-    return "<h1>YEEEET</h1>"
 
 if __name__ == '__main__':
 
