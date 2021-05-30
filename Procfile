@@ -1,2 +1,2 @@
-web:gunicorn --bind 0.0.0.0:$PORT symptom-diagnosis-bot.py
+web:gunicorn --bind 0.0.0.0:$PORT app:app
 $ heroku ps:scale web=1
