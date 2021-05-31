@@ -204,6 +204,7 @@ win-inet-pton==1.1.0
 win-unicode-console==0.5
 wincertstore==0.2
 wrapt==1.11.2
+wtforms
 xlrd==1.2.0
 XlsxWriter 
 xlwt==1.3.0
