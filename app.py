@@ -5,6 +5,8 @@ from keras.models import load_model
 from utils import all_diseases, all_symptoms, data_to_index, symptoms_to_disease
 from wtforms import Form, TextField, validators, SubmitField, IntegerField
 
+app = Flask(__name__)
+
 class ReusableForm(Form):
     number_symptoms = IntegerField("Enter the number of symptoms you wish to input:", validators = [validators.InputRequired(), validators.NumberRange(min = 1, max = 4, message = 'You must have at least one and no more than 4 symptoms.')])
     symptoms = TextField("Enter your symptoms below. Ensure that each symptom is seperated by a single space, and multi-word symptoms are seperated with underscores.", validators = [validators.InputRequired()])
@@ -14,8 +16,6 @@ class ReusableForm(Form):
 def load_keras_model():
     global model
     model = load_model('model=010.h5')
-
-app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def home():
