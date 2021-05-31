@@ -2,7 +2,6 @@ import pandas as pd
 import tensorflow as tf
 import keras
 import numpy as np
-import seaborn as sns
 
 all_diseases = ['Fungal infection', 'Allergy', 'GERD', 'Chronic cholestasis', 'Drug Reaction', 'Peptic ulcer diseae', 
 'AIDS', 'Diabetes', 'Gastroenteritis', 'Bronchial Asthma', 'Hypertension', 'Migraine', 
