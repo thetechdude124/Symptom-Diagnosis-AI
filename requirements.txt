@@ -78,6 +78,7 @@ jupyter-core==4.6.3
 jupyterlab==2.2.6
 jupyterlab-pygments 
 jupyterlab-server 
+keras
 keyring 
 kiwisolver 
 lazy-object-proxy==1.4.3
@@ -180,6 +181,7 @@ statsmodels==0.12.0
 sympy 
 tables==3.6.1
 tblib 
+tensorflow
 terminado==0.9.1
 testpath==0.4.4
 threadpoolctl 
