@@ -13,9 +13,8 @@ class ReusableForm(Form):
 
     submit = SubmitField("Enter")
 
-def load_keras_model():
-    global model
-    model = load_model('model=010.h5')
+global model
+model = load_model('model=010.h5')
 
 @app.route("/", methods=['POST', 'GET'])
 def home():
@@ -33,6 +32,4 @@ def home():
     return render_template('main.html', form = form)
 
 if __name__ == '__main__':
-
-    load_keras_model()
     app.run()
