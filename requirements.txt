@@ -1,6 +1,5 @@
 Flask==1.1.2
 gunicorn
-keras
 numpy==1.19.2
 tensorflow
 wtforms
