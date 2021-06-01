@@ -17,7 +17,7 @@ def load_keras_model():
     global model
     model = load_model('model=010.h5')
 
-@app.route("/", methods=['POST'])
+@app.route("/", methods=['POST', 'GET'])
 def home():
     #Home page with form
     form = ReusableForm(request.form)
