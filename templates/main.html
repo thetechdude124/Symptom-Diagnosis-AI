@@ -9,30 +9,25 @@
     <body>
         <div class="container">
             <h1>
-                <center>Get a Diagnosis by entering your symptoms!</center>
+                <center>Sick? Enter your symptoms for a preliminary diagnosis.</center>
             </h1>
 
             {% block content %}
-            {% for message in form.number_symptoms.errors %}
-            <div class = "flash">{{ message }}</div>
-            {% endfor %}
+
 
             {% for message in form.symptoms.errors %}
-            <div class = "flash" >{{ message }}</div>
+            <div class = "flash">{{ message }}</div>
             {% endfor %}
+            <div style = "text-align: center" id = "parent">
+                <form method ="POST" class = "obj" id = "input">
 
-            <form method ="POST" class = "obj">
-                
-                {{ form.number_symptoms.label }}
-                {{ form.number_symptoms }}
+                    {{ form.symptoms.label }}
+                    {{ form.symptoms }}
 
-                {{ form.symptoms.label }}
-                {{ form.symptoms }}
+                    {{ form.submit }}
 
-                {{ form.submit }}
-
-            </form>
-
+                </form>
+            </div>
             {% endblock %}
         </div>
     </body>
