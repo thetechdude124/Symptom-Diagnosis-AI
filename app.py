@@ -8,7 +8,7 @@ from wtforms import Form, TextField, validators, SubmitField, IntegerField
 app = Flask(__name__)
 
 class ReusableForm(Form):
-    number_symptoms = IntegerField("Enter the number of symptoms you wish to input:", validators = [validators.InputRequired(), validators.NumberRange(min = 1, max = 4, message = 'You must have at least one and no more than 4 symptoms.')])
+    # number_symptoms = IntegerField("Enter the number of symptoms you wish to input:", validators = [validators.InputRequired(), validators.NumberRange(min = 1, max = 4, message = 'You must have at least one and no more than 4 symptoms.')])
     symptoms = TextField("Enter your symptoms below. Ensure that each symptom is seperated by a single space, and multi-word symptoms are seperated with underscores.", validators = [validators.InputRequired()])
 
     submit = SubmitField("Enter")
@@ -22,7 +22,7 @@ def home():
     form = ReusableForm(request.form)
 
     if request.method == 'POST' and form.validate():
-        n_symptoms = request.form['number_symptoms']
+        # n_symptoms = request.form['number_symptoms']
         symptoms = request.form['symptoms']
         symptoms = symptoms.split()
         disease = symptoms_to_disease(symptoms, model)
