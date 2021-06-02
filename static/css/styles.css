@@ -1,12 +1,8 @@
-body {
-    background-image: url("static/css/background-image.jpg");
-    background-color: #cccccc; 
-}
 
 .container {
     height: 200px;
     position: relative;
-    border: 3px solid rgb(84, 84, 231);
+    border: 5px solid rgb(230, 86, 86);
 }
 
 #parent {

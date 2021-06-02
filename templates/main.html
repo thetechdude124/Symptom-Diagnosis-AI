@@ -7,28 +7,35 @@
     </head>
 
     <body>
-        <div class="container">
-            <h1>
-                <center>Sick? Enter your symptoms for a preliminary diagnosis.</center>
-            </h1>
+        <style>
+            body {
+                background-image: url('/static/background-image.jpg');
+            }
+        </style>
+        <div>
+            <div class="container">
+                <h1 style ="color:white">
+                    <center>Sick? Enter your symptoms for a preliminary diagnosis.</center>
+                </h1>
 
-            {% block content %}
+                {% block content %}
 
 
-            {% for message in form.symptoms.errors %}
-            <div class = "flash">{{ message }}</div>
-            {% endfor %}
-            <div style = "text-align: center" id = "parent">
-                <form method ="POST" class = "obj" id = "input">
+                {% for message in form.symptoms.errors %}
+                <div class = "flash">{{ message }}</div>
+                {% endfor %}
+                <div style = "text-align: center" id = "parent">
+                    <form method ="POST" class = "obj" id = "input" style ="color:white">
 
-                    {{ form.symptoms.label }}
-                    {{ form.symptoms }}
+                        {{ form.symptoms.label }}
+                        {{ form.symptoms }}
 
-                    {{ form.submit }}
+                        {{ form.submit }}
 
-                </form>
+                    </form>
+                </div>
+                {% endblock %}
             </div>
-            {% endblock %}
         </div>
     </body>
 </html>
