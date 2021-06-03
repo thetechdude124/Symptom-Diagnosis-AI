@@ -5,13 +5,19 @@
             Diagnosis
         </title>
 
-        <ul>
-            <li><a href = "">Home</a></li>
-        </ul>
+
     </header>
 
     <body>
-        <div class = "container">
+        <style>
+            body {
+                background-image: url('/static/background-image.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
+        <div class = "container" style ="color:white; font-family: 'Open Sans', sans-serif">
+            <p>Based on the information given, we have reached a potential diagnosis. However, be sure to check with further authorities!</p>
             {% block content %}
             {{input|safe}}
             {% endblock %}
