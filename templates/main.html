@@ -10,11 +10,13 @@
         <style>
             body {
                 background-image: url('/static/background-image.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
             }
         </style>
         <div>
             <div class="container">
-                <h1 style ="color:white">
+                <h1 style ="color:white; font-family: 'Open Sans', sans-serif">
                     <center>Sick? Enter your symptoms for a preliminary diagnosis.</center>
                 </h1>
 
@@ -22,10 +24,10 @@
 
 
                 {% for message in form.symptoms.errors %}
-                <div class = "flash">{{ message }}</div>
+                <div class = "flash" >{{ message }}</div>
                 {% endfor %}
                 <div style = "text-align: center" id = "parent">
-                    <form method ="POST" class = "obj" id = "input" style ="color:white">
+                    <form method ="POST" class = "obj" id = "input" style ="color:white; font-family: 'Open Sans', sans-serif">
 
                         {{ form.symptoms.label }}
                         {{ form.symptoms }}

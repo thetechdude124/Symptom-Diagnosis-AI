@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .container {
-    height: 200px;
+    height: 100px;
     position: relative;
-    border: 5px solid rgb(230, 86, 86);
+    font-family: 'Open Sans', sans-serif;
 }
 
 #parent {
