@@ -4,9 +4,6 @@
     <head>
         <link rel = "stylesheet" href="{{ url_for('static', filename = 'css/styles.css')}}">
         <title>Symptom Diagnosis chatbot</title>
-        <ul>
-            <li><a href = "https://docs.google.com/document/d/1hKN9nP1B1Dgt2QX40gJr0Eiv1Hz0TwpButgtFL0Fzfk/edit?usp=sharing">Home</a></li>
-        </ul>
     </head>
 
     <body>
@@ -37,9 +34,14 @@
 
                         {{ form.submit }}
 
+                        <ul>
+                            <a class = "link" style ="color:white; font-family: 'Open Sans', sans-serif; text-align: center; list-style: none;" href = "https://docs.google.com/document/d/1hKN9nP1B1Dgt2QX40gJr0Eiv1Hz0TwpButgtFL0Fzfk/edit?usp=sharing" target ="_blank"><p style = "text-align: center; list-style: none;"></p>Click here for the full list of supported diseases and symptoms.</a>
+                        </ul>
+
                     </form>
                 </div>
                 {% endblock %}
+
             </div>
         </div>
     </body>
